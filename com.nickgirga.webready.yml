@@ -1,6 +1,6 @@
 id: com.nickgirga.webready
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '49'
 sdk: org.gnome.Sdk
 command: webready
 
@@ -17,11 +17,11 @@ modules:
   - name: ffmpeg_progress_yield
     buildsystem: simple
     build-commands:
-      - pip3 install --prefix=/app --no-deps .
+      - pip3 install --prefix=/app --no-deps *.whl
     sources:
-      - type: archive
-        url: https://files.pythonhosted.org/packages/ec/42/4d4a0471c56e7c493bb919b3518a7390f2f6b5110fd00bde909f97883807/ffmpeg-progress-yield-0.7.8.tar.gz
-        sha256: 9ae6ae5f832ae7c7b0f6518f1341fe6eee1ba8fc9d3400cba1cba38f2eaa461e
+      - type: file
+        url: https://files.pythonhosted.org/packages/a8/a7/a766ea8238f7e2ae43d771982bcde84a585a40bf47b58e5b0fc777d24ab0/ffmpeg_progress_yield-1.0.5-py3-none-any.whl
+        sha256: 46f8e6223242920c9ffe5710acbf75b64bc171c9e714b27ccf97df8814229e3a
 
   - name: webready
     buildsystem: simple
